@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mScoreText2;
     private final String STATE_SCORE_1 = "Team 1 Score";
     private final String STATE_SCORE_2 = "Team 2 Score";
-    private ImageButton decreaseTeambutton_1;
+    private ImageView decrease_1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         mScoreText1 = findViewById(R.id.score1);
         mScoreText2 = findViewById(R.id.score2);
-
-        decreaseTeambutton_1 = findViewById(R.id.decreaseTeam1);
-
+        decrease_1 = findViewById(R.id.decreaseTeam1);
 
         if (savedInstanceState != null) {
             mScore1 = savedInstanceState.getInt(STATE_SCORE_1);
